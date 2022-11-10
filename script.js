@@ -9,11 +9,10 @@ function getComputerChoice() {
     return choices[index];
 }
 
-
+let playerSelection;
 let computerSelection = getComputerChoice();
 
 
-let userInput = prompt("Choose Rock , Paper or Scissors ?");
 
 
 
@@ -54,16 +53,18 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = userInput.toLowerCase();
 
 function game() {
     for (let i = 0; i < 5; i++) {
+        let userInput = prompt("Choose Rock , Paper or Scissors ?");
+        let playerSelection = userInput.toLowerCase();
         playRound(playerSelection, computerSelection);
+        console.log(playerSelection, computerSelection, yourScore, computerScore);
+
 
     }
 }
 
 
 game();
-console.log(playerSelection, computerSelection, yourScore, computerScore);
 
